@@ -1,0 +1,1021 @@
+[
+  {
+    "run_id": "run_8fb9c14e",
+    "timestamp": "2026-11-07T17:15:09.295109",
+    "topic": "Introduction to RAG",
+    "total_iterations": 3,
+    "final_status": "REJECTED_AFTER_RETRIES",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "BEGINNER_FRIENDLY_LANGUAGE"
+        ],
+        "reasons": [
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 8.7 (exceeds maximum allowed 8.5)."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points."
+      },
+      {
+        "iteration": 2,
+        "failed_checkpoints": [
+          "BEGINNER_FRIENDLY_LANGUAGE"
+        ],
+        "reasons": [
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 8.7 (exceeds maximum allowed 8.5)."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points."
+      }
+    ]
+  },
+  {
+    "run_id": "run_9ab46b63",
+    "timestamp": "2026-11-07T17:15:58.350452",
+    "topic": "Introduction to RAG",
+    "total_iterations": 3,
+    "final_status": "REJECTED_AFTER_RETRIES",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "BEGINNER_FRIENDLY_LANGUAGE"
+        ],
+        "reasons": [
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 8.7 (exceeds maximum allowed 8.5)."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points."
+      },
+      {
+        "iteration": 2,
+        "failed_checkpoints": [
+          "NO_UNEXPLAINED_JARGON"
+        ],
+        "reasons": [
+          "[NO_UNEXPLAINED_JARGON] Contains unexplained technical jargon: hallucination (used without simple plain-language explanation)."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- NO_UNEXPLAINED_JARGON: Either remove or immediately define these terms using simple everyday analogies: hallucination (used without simple plain-language explanation)."
+      }
+    ]
+  },
+  {
+    "run_id": "run_24c851da",
+    "timestamp": "2026-11-07T17:16:17.099673",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "BEGINNER_FRIENDLY_LANGUAGE"
+        ],
+        "reasons": [
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 8.7 (exceeds maximum allowed 8.5)."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points."
+      }
+    ]
+  },
+  {
+    "run_id": "run_75f1d42b",
+    "timestamp": "2026-11-07T17:16:27.541661",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "ACCURACY_AND_GROUNDED",
+          "BEGINNER_FRIENDLY_LANGUAGE",
+          "TEACHES_BY_EXAMPLE",
+          "NO_UNEXPLAINED_JARGON",
+          "KEY_POINTS_COVERAGE",
+          "COHERENT_TEACHING_FLOW"
+        ],
+        "reasons": [
+          "[ACCURACY_AND_GROUNDED] Missing fundamental technical pillars: External knowledge base / documents.",
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 22.8 (exceeds maximum allowed 8.5); Reading ease is 0.0/100 (below minimum 60.0).",
+          "[TEACHES_BY_EXAMPLE] Fails: Lacks a concrete, relatable real-world analogy to anchor the concept for a complete beginner.",
+          "[NO_UNEXPLAINED_JARGON] Contains unexplained technical jargon: vector (used without simple plain-language explanation), embedding (used without simple plain-language explanation), retrieval (used without simple plain-language explanation), token (used without simple plain-language explanation), cosine similarity (used without simple plain-language explanation), latent (dense academic jargon unsuitable for 12th-grade beginners), hnsw (dense academic jargon unsuitable for 12th-grade beginners), mips (dense academic jargon unsuitable for 12th-grade beginners), perplexity (dense academic jargon unsuitable for 12th-grade beginners).",
+          "[KEY_POINTS_COVERAGE] Missing essential curriculum sections: What is RAG (Core Definition), Why it matters (Problem solved & hallucinations), How it works (Step-by-step mechanism).",
+          "[COHERENT_TEACHING_FLOW] Incomplete pedagogical flow: Missing Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Encouraging closing / Next steps for learner."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- ACCURACY_AND_GROUNDED: Explicitly walk through the full loop: Knowledge Base -> Retrieval (Search) -> Augmentation (Prompt) -> Generation (Answer).\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points.\n- TEACHES_BY_EXAMPLE: Use the 'Open-Book Exam vs Closed-Book Exam' or 'College Librarian' analogy right near the beginning to explain RAG.\n- NO_UNEXPLAINED_JARGON: Either remove or immediately define these terms using simple everyday analogies: vector (used without simple plain-language explanation), embedding (used without simple plain-language explanation), retrieval (used without simple plain-language explanation), token (used without simple plain-language explanation), cosine similarity (used without simple plain-language explanation), latent (dense academic jargon unsuitable for 12th-grade beginners), hnsw (dense academic jargon unsuitable for 12th-grade beginners), mips (dense academic jargon unsuitable for 12th-grade beginners), perplexity (dense academic jargon unsuitable for 12th-grade beginners).\n- KEY_POINTS_COVERAGE: Add clear, dedicated sections with headers covering: What is RAG (Core Definition), Why it matters (Problem solved & hallucinations), How it works (Step-by-step mechanism).\n- COHERENT_TEACHING_FLOW: Include Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Encouraging closing / Next steps for learner to complete the learning journey."
+      }
+    ]
+  },
+  {
+    "run_id": "run_74dea579",
+    "timestamp": "2026-11-07T17:17:22.203807",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "BEGINNER_FRIENDLY_LANGUAGE"
+        ],
+        "reasons": [
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 8.7 (exceeds maximum allowed 8.5)."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points."
+      }
+    ]
+  },
+  {
+    "run_id": "run_82f8496c",
+    "timestamp": "2026-11-07T17:17:22.242432",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "ACCURACY_AND_GROUNDED",
+          "BEGINNER_FRIENDLY_LANGUAGE",
+          "TEACHES_BY_EXAMPLE",
+          "NO_UNEXPLAINED_JARGON",
+          "KEY_POINTS_COVERAGE",
+          "COHERENT_TEACHING_FLOW"
+        ],
+        "reasons": [
+          "[ACCURACY_AND_GROUNDED] Missing fundamental technical pillars: External knowledge base / documents.",
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 22.8 (exceeds maximum allowed 8.5); Reading ease is 0.0/100 (below minimum 60.0).",
+          "[TEACHES_BY_EXAMPLE] Fails: Lacks a concrete, relatable real-world analogy to anchor the concept for a complete beginner.",
+          "[NO_UNEXPLAINED_JARGON] Contains unexplained technical jargon: vector (used without simple plain-language explanation), embedding (used without simple plain-language explanation), retrieval (used without simple plain-language explanation), token (used without simple plain-language explanation), cosine similarity (used without simple plain-language explanation), latent (dense academic jargon unsuitable for 12th-grade beginners), hnsw (dense academic jargon unsuitable for 12th-grade beginners), mips (dense academic jargon unsuitable for 12th-grade beginners), perplexity (dense academic jargon unsuitable for 12th-grade beginners).",
+          "[KEY_POINTS_COVERAGE] Missing essential curriculum sections: What is RAG (Core Definition), Why it matters (Problem solved & hallucinations), How it works (Step-by-step mechanism).",
+          "[COHERENT_TEACHING_FLOW] Incomplete pedagogical flow: Missing Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Encouraging closing / Next steps for learner."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- ACCURACY_AND_GROUNDED: Explicitly walk through the full loop: Knowledge Base -> Retrieval (Search) -> Augmentation (Prompt) -> Generation (Answer).\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points.\n- TEACHES_BY_EXAMPLE: Use the 'Open-Book Exam vs Closed-Book Exam' or 'College Librarian' analogy right near the beginning to explain RAG.\n- NO_UNEXPLAINED_JARGON: Either remove or immediately define these terms using simple everyday analogies: vector (used without simple plain-language explanation), embedding (used without simple plain-language explanation), retrieval (used without simple plain-language explanation), token (used without simple plain-language explanation), cosine similarity (used without simple plain-language explanation), latent (dense academic jargon unsuitable for 12th-grade beginners), hnsw (dense academic jargon unsuitable for 12th-grade beginners), mips (dense academic jargon unsuitable for 12th-grade beginners), perplexity (dense academic jargon unsuitable for 12th-grade beginners).\n- KEY_POINTS_COVERAGE: Add clear, dedicated sections with headers covering: What is RAG (Core Definition), Why it matters (Problem solved & hallucinations), How it works (Step-by-step mechanism).\n- COHERENT_TEACHING_FLOW: Include Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Encouraging closing / Next steps for learner to complete the learning journey."
+      }
+    ]
+  },
+  {
+    "run_id": "run_3a0419b1",
+    "timestamp": "2026-11-07T17:17:22.283782",
+    "topic": "Introduction to RAG",
+    "total_iterations": 1,
+    "final_status": "REJECTED_AFTER_RETRIES",
+    "rejections": []
+  },
+  {
+    "run_id": "test_run_1",
+    "timestamp": "2026-11-07T17:17:22.317705",
+    "topic": "Test RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "NO_UNEXPLAINED_JARGON",
+          "BEGINNER_FRIENDLY_LANGUAGE"
+        ],
+        "reasons": [
+          "Contains unexplained jargon",
+          "Reading level too high"
+        ],
+        "remediation": "Define terms immediately in simple Hindi/English cognates"
+      }
+    ]
+  },
+  {
+    "run_id": "run_8428f169",
+    "timestamp": "2026-11-07T17:17:49.796049",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "BEGINNER_FRIENDLY_LANGUAGE"
+        ],
+        "reasons": [
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 8.7 (exceeds maximum allowed 8.5)."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points."
+      }
+    ]
+  },
+  {
+    "run_id": "run_7b46a1f8",
+    "timestamp": "2026-11-07T17:17:49.857962",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "ACCURACY_AND_GROUNDED",
+          "BEGINNER_FRIENDLY_LANGUAGE",
+          "TEACHES_BY_EXAMPLE",
+          "NO_UNEXPLAINED_JARGON",
+          "KEY_POINTS_COVERAGE",
+          "COHERENT_TEACHING_FLOW"
+        ],
+        "reasons": [
+          "[ACCURACY_AND_GROUNDED] Missing fundamental technical pillars: External knowledge base / documents.",
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 22.8 (exceeds maximum allowed 8.5); Reading ease is 0.0/100 (below minimum 60.0).",
+          "[TEACHES_BY_EXAMPLE] Fails: Lacks a concrete, relatable real-world analogy to anchor the concept for a complete beginner.",
+          "[NO_UNEXPLAINED_JARGON] Contains unexplained technical jargon: vector (used without simple plain-language explanation), embedding (used without simple plain-language explanation), retrieval (used without simple plain-language explanation), token (used without simple plain-language explanation), cosine similarity (used without simple plain-language explanation), latent (dense academic jargon unsuitable for 12th-grade beginners), hnsw (dense academic jargon unsuitable for 12th-grade beginners), mips (dense academic jargon unsuitable for 12th-grade beginners), perplexity (dense academic jargon unsuitable for 12th-grade beginners).",
+          "[KEY_POINTS_COVERAGE] Missing essential curriculum sections: What is RAG (Core Definition), Why it matters (Problem solved & hallucinations), How it works (Step-by-step mechanism).",
+          "[COHERENT_TEACHING_FLOW] Incomplete pedagogical flow: Missing Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Encouraging closing / Next steps for learner."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- ACCURACY_AND_GROUNDED: Explicitly walk through the full loop: Knowledge Base -> Retrieval (Search) -> Augmentation (Prompt) -> Generation (Answer).\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points.\n- TEACHES_BY_EXAMPLE: Use the 'Open-Book Exam vs Closed-Book Exam' or 'College Librarian' analogy right near the beginning to explain RAG.\n- NO_UNEXPLAINED_JARGON: Either remove or immediately define these terms using simple everyday analogies: vector (used without simple plain-language explanation), embedding (used without simple plain-language explanation), retrieval (used without simple plain-language explanation), token (used without simple plain-language explanation), cosine similarity (used without simple plain-language explanation), latent (dense academic jargon unsuitable for 12th-grade beginners), hnsw (dense academic jargon unsuitable for 12th-grade beginners), mips (dense academic jargon unsuitable for 12th-grade beginners), perplexity (dense academic jargon unsuitable for 12th-grade beginners).\n- KEY_POINTS_COVERAGE: Add clear, dedicated sections with headers covering: What is RAG (Core Definition), Why it matters (Problem solved & hallucinations), How it works (Step-by-step mechanism).\n- COHERENT_TEACHING_FLOW: Include Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Encouraging closing / Next steps for learner to complete the learning journey."
+      }
+    ]
+  },
+  {
+    "run_id": "run_331784dd",
+    "timestamp": "2026-11-07T17:17:49.915090",
+    "topic": "Introduction to RAG",
+    "total_iterations": 1,
+    "final_status": "REJECTED_AFTER_RETRIES",
+    "rejections": []
+  },
+  {
+    "run_id": "run_6ed63c7a",
+    "timestamp": "2026-11-07T17:20:52.597301",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "BEGINNER_FRIENDLY_LANGUAGE"
+        ],
+        "reasons": [
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 8.7 (exceeds maximum allowed 8.5)."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points."
+      }
+    ]
+  },
+  {
+    "run_id": "run_082db9b6",
+    "timestamp": "2026-11-07T17:20:52.641297",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "ACCURACY_AND_GROUNDED",
+          "BEGINNER_FRIENDLY_LANGUAGE",
+          "TEACHES_BY_EXAMPLE",
+          "NO_UNEXPLAINED_JARGON",
+          "KEY_POINTS_COVERAGE",
+          "COHERENT_TEACHING_FLOW"
+        ],
+        "reasons": [
+          "[ACCURACY_AND_GROUNDED] Missing fundamental technical pillars: External knowledge base / documents.",
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 22.8 (exceeds maximum allowed 8.5); Reading ease is 0.0/100 (below minimum 60.0).",
+          "[TEACHES_BY_EXAMPLE] Fails: Lacks a concrete, relatable real-world analogy to anchor the concept for a complete beginner.",
+          "[NO_UNEXPLAINED_JARGON] Contains unexplained technical jargon: vector (used without simple plain-language explanation), embedding (used without simple plain-language explanation), retrieval (used without simple plain-language explanation), token (used without simple plain-language explanation), cosine similarity (used without simple plain-language explanation), latent (dense academic jargon unsuitable for 12th-grade beginners), hnsw (dense academic jargon unsuitable for 12th-grade beginners), mips (dense academic jargon unsuitable for 12th-grade beginners), perplexity (dense academic jargon unsuitable for 12th-grade beginners).",
+          "[KEY_POINTS_COVERAGE] Missing essential curriculum sections: What is RAG (Core Definition), Why it matters (Problem solved & hallucinations), How it works (Step-by-step mechanism).",
+          "[COHERENT_TEACHING_FLOW] Incomplete pedagogical flow: Missing Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Encouraging closing / Next steps for learner."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- ACCURACY_AND_GROUNDED: Explicitly walk through the full loop: Knowledge Base -> Retrieval (Search) -> Augmentation (Prompt) -> Generation (Answer).\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points.\n- TEACHES_BY_EXAMPLE: Use the 'Open-Book Exam vs Closed-Book Exam' or 'College Librarian' analogy right near the beginning to explain RAG.\n- NO_UNEXPLAINED_JARGON: Either remove or immediately define these terms using simple everyday analogies: vector (used without simple plain-language explanation), embedding (used without simple plain-language explanation), retrieval (used without simple plain-language explanation), token (used without simple plain-language explanation), cosine similarity (used without simple plain-language explanation), latent (dense academic jargon unsuitable for 12th-grade beginners), hnsw (dense academic jargon unsuitable for 12th-grade beginners), mips (dense academic jargon unsuitable for 12th-grade beginners), perplexity (dense academic jargon unsuitable for 12th-grade beginners).\n- KEY_POINTS_COVERAGE: Add clear, dedicated sections with headers covering: What is RAG (Core Definition), Why it matters (Problem solved & hallucinations), How it works (Step-by-step mechanism).\n- COHERENT_TEACHING_FLOW: Include Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Encouraging closing / Next steps for learner to complete the learning journey."
+      }
+    ]
+  },
+  {
+    "run_id": "run_fb16ec0d",
+    "timestamp": "2026-11-07T17:20:52.676169",
+    "topic": "Introduction to RAG",
+    "total_iterations": 1,
+    "final_status": "REJECTED_AFTER_RETRIES",
+    "rejections": []
+  },
+  {
+    "run_id": "run_d16c986f",
+    "timestamp": "2026-11-07T19:45:48.891399",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "BEGINNER_FRIENDLY_LANGUAGE"
+        ],
+        "reasons": [
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 8.7 (exceeds maximum allowed 8.5)."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points."
+      }
+    ]
+  },
+  {
+    "run_id": "run_b9cd77a3",
+    "timestamp": "2026-11-07T19:45:59.358684",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "ACCURACY_AND_GROUNDED",
+          "BEGINNER_FRIENDLY_LANGUAGE",
+          "TEACHES_BY_EXAMPLE",
+          "NO_UNEXPLAINED_JARGON",
+          "KEY_POINTS_COVERAGE",
+          "COHERENT_TEACHING_FLOW"
+        ],
+        "reasons": [
+          "[ACCURACY_AND_GROUNDED] Missing fundamental technical pillars: External knowledge base / documents.",
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 22.8 (exceeds maximum allowed 8.5); Reading ease is 0.0/100 (below minimum 60.0).",
+          "[TEACHES_BY_EXAMPLE] Fails: Lacks a concrete, relatable real-world analogy to anchor the concept for a complete beginner.",
+          "[NO_UNEXPLAINED_JARGON] Contains unexplained technical jargon: vector (used without simple plain-language explanation), embedding (used without simple plain-language explanation), retrieval (used without simple plain-language explanation), token (used without simple plain-language explanation), cosine similarity (used without simple plain-language explanation), latent (dense academic jargon unsuitable for 12th-grade beginners), hnsw (dense academic jargon unsuitable for 12th-grade beginners), mips (dense academic jargon unsuitable for 12th-grade beginners), perplexity (dense academic jargon unsuitable for 12th-grade beginners).",
+          "[KEY_POINTS_COVERAGE] Missing essential curriculum sections: What is RAG (Core Definition), Why it matters (Problem solved & hallucinations), How it works (Step-by-step mechanism).",
+          "[COHERENT_TEACHING_FLOW] Incomplete pedagogical flow: Missing Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Encouraging closing / Next steps for learner."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- ACCURACY_AND_GROUNDED: Explicitly walk through the full loop: Knowledge Base -> Retrieval (Search) -> Augmentation (Prompt) -> Generation (Answer).\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points.\n- TEACHES_BY_EXAMPLE: Use the 'Open-Book Exam vs Closed-Book Exam' or 'College Librarian' analogy right near the beginning to explain RAG.\n- NO_UNEXPLAINED_JARGON: Either remove or immediately define these terms using simple everyday analogies: vector (used without simple plain-language explanation), embedding (used without simple plain-language explanation), retrieval (used without simple plain-language explanation), token (used without simple plain-language explanation), cosine similarity (used without simple plain-language explanation), latent (dense academic jargon unsuitable for 12th-grade beginners), hnsw (dense academic jargon unsuitable for 12th-grade beginners), mips (dense academic jargon unsuitable for 12th-grade beginners), perplexity (dense academic jargon unsuitable for 12th-grade beginners).\n- KEY_POINTS_COVERAGE: Add clear, dedicated sections with headers covering: What is RAG (Core Definition), Why it matters (Problem solved & hallucinations), How it works (Step-by-step mechanism).\n- COHERENT_TEACHING_FLOW: Include Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Encouraging closing / Next steps for learner to complete the learning journey."
+      }
+    ]
+  },
+  {
+    "run_id": "run_3e3711ef",
+    "timestamp": "2026-11-07T19:52:01.395601",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "BEGINNER_FRIENDLY_LANGUAGE"
+        ],
+        "reasons": [
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 8.7 (exceeds maximum allowed 8.5)."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points."
+      }
+    ]
+  },
+  {
+    "run_id": "run_a5177290",
+    "timestamp": "2026-11-07T19:52:01.444333",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "ACCURACY_AND_GROUNDED",
+          "BEGINNER_FRIENDLY_LANGUAGE",
+          "TEACHES_BY_EXAMPLE",
+          "NO_UNEXPLAINED_JARGON",
+          "KEY_POINTS_COVERAGE",
+          "COHERENT_TEACHING_FLOW"
+        ],
+        "reasons": [
+          "[ACCURACY_AND_GROUNDED] Missing fundamental technical pillars: External knowledge base / documents.",
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 22.8 (exceeds maximum allowed 8.5); Reading ease is 0.0/100 (below minimum 60.0).",
+          "[TEACHES_BY_EXAMPLE] Fails: Lacks a concrete, relatable real-world analogy to anchor the concept for a complete beginner.",
+          "[NO_UNEXPLAINED_JARGON] Contains unexplained technical jargon: vector (used without simple plain-language explanation), embedding (used without simple plain-language explanation), retrieval (used without simple plain-language explanation), token (used without simple plain-language explanation), cosine similarity (used without simple plain-language explanation), latent (dense academic jargon unsuitable for 12th-grade beginners), hnsw (dense academic jargon unsuitable for 12th-grade beginners), mips (dense academic jargon unsuitable for 12th-grade beginners), perplexity (dense academic jargon unsuitable for 12th-grade beginners).",
+          "[KEY_POINTS_COVERAGE] Missing essential curriculum sections: What is RAG (Core Definition), Why it matters (Problem solved & hallucinations), How it works (Step-by-step mechanism).",
+          "[COHERENT_TEACHING_FLOW] Incomplete pedagogical flow: Missing Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Encouraging closing / Next steps for learner."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- ACCURACY_AND_GROUNDED: Explicitly walk through the full loop: Knowledge Base -> Retrieval (Search) -> Augmentation (Prompt) -> Generation (Answer).\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points.\n- TEACHES_BY_EXAMPLE: Use the 'Open-Book Exam vs Closed-Book Exam' or 'College Librarian' analogy right near the beginning to explain RAG.\n- NO_UNEXPLAINED_JARGON: Either remove or immediately define these terms using simple everyday analogies: vector (used without simple plain-language explanation), embedding (used without simple plain-language explanation), retrieval (used without simple plain-language explanation), token (used without simple plain-language explanation), cosine similarity (used without simple plain-language explanation), latent (dense academic jargon unsuitable for 12th-grade beginners), hnsw (dense academic jargon unsuitable for 12th-grade beginners), mips (dense academic jargon unsuitable for 12th-grade beginners), perplexity (dense academic jargon unsuitable for 12th-grade beginners).\n- KEY_POINTS_COVERAGE: Add clear, dedicated sections with headers covering: What is RAG (Core Definition), Why it matters (Problem solved & hallucinations), How it works (Step-by-step mechanism).\n- COHERENT_TEACHING_FLOW: Include Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Encouraging closing / Next steps for learner to complete the learning journey."
+      }
+    ]
+  },
+  {
+    "run_id": "run_dccb54f7",
+    "timestamp": "2026-11-07T19:52:01.481668",
+    "topic": "Introduction to RAG",
+    "total_iterations": 1,
+    "final_status": "REJECTED_AFTER_RETRIES",
+    "rejections": []
+  },
+  {
+    "run_id": "run_706a12a9",
+    "timestamp": "2026-11-07T19:52:10.538883",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "BEGINNER_FRIENDLY_LANGUAGE"
+        ],
+        "reasons": [
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 8.7 (exceeds maximum allowed 8.5)."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points."
+      }
+    ]
+  },
+  {
+    "run_id": "run_73a1553f",
+    "timestamp": "2026-11-07T19:53:12.615497",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "BEGINNER_FRIENDLY_LANGUAGE"
+        ],
+        "reasons": [
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 8.7 (exceeds maximum allowed 8.5)."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points."
+      }
+    ]
+  },
+  {
+    "run_id": "run_8fc144d2",
+    "timestamp": "2026-11-08T00:15:52.615286",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "BEGINNER_FRIENDLY_LANGUAGE"
+        ],
+        "reasons": [
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 8.7 (exceeds maximum allowed 8.5)."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points."
+      }
+    ]
+  },
+  {
+    "run_id": "run_d8be8a46",
+    "timestamp": "2026-11-08T00:16:37.847104",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "ACCURACY_AND_GROUNDED",
+          "BEGINNER_FRIENDLY_LANGUAGE",
+          "TEACHES_BY_EXAMPLE",
+          "NO_UNEXPLAINED_JARGON",
+          "KEY_POINTS_COVERAGE",
+          "COHERENT_TEACHING_FLOW"
+        ],
+        "reasons": [
+          "[ACCURACY_AND_GROUNDED] Missing fundamental technical pillars: External knowledge base / documents.",
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 22.8 (exceeds maximum allowed 8.5); Reading ease is 0.0/100 (below minimum 60.0).",
+          "[TEACHES_BY_EXAMPLE] Fails: Lacks a concrete, relatable real-world analogy to anchor the concept for a complete beginner.",
+          "[NO_UNEXPLAINED_JARGON] Contains unexplained technical jargon: vector (used without simple plain-language explanation), embedding (used without simple plain-language explanation), retrieval (used without simple plain-language explanation), token (used without simple plain-language explanation), cosine similarity (used without simple plain-language explanation), latent (dense academic jargon unsuitable for 12th-grade beginners), hnsw (dense academic jargon unsuitable for 12th-grade beginners), mips (dense academic jargon unsuitable for 12th-grade beginners), perplexity (dense academic jargon unsuitable for 12th-grade beginners).",
+          "[KEY_POINTS_COVERAGE] Missing essential curriculum sections: What is RAG (Core Definition), Why it matters (Problem solved & hallucinations), How it works (Step-by-step mechanism).",
+          "[COHERENT_TEACHING_FLOW] Incomplete pedagogical flow: Missing Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Encouraging closing / Next steps for learner."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- ACCURACY_AND_GROUNDED: Explicitly walk through the full loop: Knowledge Base -> Retrieval (Search) -> Augmentation (Prompt) -> Generation (Answer).\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points.\n- TEACHES_BY_EXAMPLE: Use the 'Open-Book Exam vs Closed-Book Exam' or 'College Librarian' analogy right near the beginning to explain RAG.\n- NO_UNEXPLAINED_JARGON: Either remove or immediately define these terms using simple everyday analogies: vector (used without simple plain-language explanation), embedding (used without simple plain-language explanation), retrieval (used without simple plain-language explanation), token (used without simple plain-language explanation), cosine similarity (used without simple plain-language explanation), latent (dense academic jargon unsuitable for 12th-grade beginners), hnsw (dense academic jargon unsuitable for 12th-grade beginners), mips (dense academic jargon unsuitable for 12th-grade beginners), perplexity (dense academic jargon unsuitable for 12th-grade beginners).\n- KEY_POINTS_COVERAGE: Add clear, dedicated sections with headers covering: What is RAG (Core Definition), Why it matters (Problem solved & hallucinations), How it works (Step-by-step mechanism).\n- COHERENT_TEACHING_FLOW: Include Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Encouraging closing / Next steps for learner to complete the learning journey."
+      }
+    ]
+  },
+  {
+    "run_id": "run_7cc78de1",
+    "timestamp": "2026-11-08T00:16:43.419561",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "ACCURACY_AND_GROUNDED",
+          "BEGINNER_FRIENDLY_LANGUAGE",
+          "TEACHES_BY_EXAMPLE",
+          "NO_UNEXPLAINED_JARGON",
+          "KEY_POINTS_COVERAGE",
+          "COHERENT_TEACHING_FLOW"
+        ],
+        "reasons": [
+          "[ACCURACY_AND_GROUNDED] Missing fundamental technical pillars: External knowledge base / documents.",
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 27.9 (exceeds maximum allowed 8.5); Reading ease is 0.0/100 (below minimum 60.0).",
+          "[TEACHES_BY_EXAMPLE] Fails: Lacks a concrete, relatable real-world analogy to anchor the concept for a complete beginner.",
+          "[NO_UNEXPLAINED_JARGON] Contains unexplained technical jargon: hallucination (used without simple plain-language explanation), retrieval (used without simple plain-language explanation), token (used without simple plain-language explanation), autoregressive (dense academic jargon unsuitable for 12th-grade beginners), epistemological (dense academic jargon unsuitable for 12th-grade beginners).",
+          "[KEY_POINTS_COVERAGE] Missing essential curriculum sections: What is RAG (Core Definition), How it works (Step-by-step mechanism).",
+          "[COHERENT_TEACHING_FLOW] Incomplete pedagogical flow: Missing Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Encouraging closing / Next steps for learner."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- ACCURACY_AND_GROUNDED: Explicitly walk through the full loop: Knowledge Base -> Retrieval (Search) -> Augmentation (Prompt) -> Generation (Answer).\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points.\n- TEACHES_BY_EXAMPLE: Use the 'Open-Book Exam vs Closed-Book Exam' or 'College Librarian' analogy right near the beginning to explain RAG.\n- NO_UNEXPLAINED_JARGON: Either remove or immediately define these terms using simple everyday analogies: hallucination (used without simple plain-language explanation), retrieval (used without simple plain-language explanation), token (used without simple plain-language explanation), autoregressive (dense academic jargon unsuitable for 12th-grade beginners), epistemological (dense academic jargon unsuitable for 12th-grade beginners).\n- KEY_POINTS_COVERAGE: Add clear, dedicated sections with headers covering: What is RAG (Core Definition), How it works (Step-by-step mechanism).\n- COHERENT_TEACHING_FLOW: Include Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Encouraging closing / Next steps for learner to complete the learning journey."
+      }
+    ]
+  },
+  {
+    "run_id": "run_6951f3dd",
+    "timestamp": "2026-11-08T00:20:48.871120",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "ACCURACY_AND_GROUNDED",
+          "BEGINNER_FRIENDLY_LANGUAGE",
+          "TEACHES_BY_EXAMPLE",
+          "NO_UNEXPLAINED_JARGON",
+          "KEY_POINTS_COVERAGE",
+          "COHERENT_TEACHING_FLOW"
+        ],
+        "reasons": [
+          "[ACCURACY_AND_GROUNDED] Missing fundamental technical pillars: External knowledge base / documents.",
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 27.9 (exceeds maximum allowed 8.5); Reading ease is 0.0/100 (below minimum 60.0).",
+          "[TEACHES_BY_EXAMPLE] Fails: Lacks a concrete, relatable real-world analogy to anchor the concept for a complete beginner.",
+          "[NO_UNEXPLAINED_JARGON] Contains unexplained technical jargon: hallucination (used without simple plain-language explanation), retrieval (used without simple plain-language explanation), token (used without simple plain-language explanation), autoregressive (dense academic jargon unsuitable for 12th-grade beginners), epistemological (dense academic jargon unsuitable for 12th-grade beginners).",
+          "[KEY_POINTS_COVERAGE] Missing essential curriculum sections: What is RAG (Core Definition), How it works (Step-by-step mechanism).",
+          "[COHERENT_TEACHING_FLOW] Incomplete pedagogical flow: Missing Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Encouraging closing / Next steps for learner."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- ACCURACY_AND_GROUNDED: Explicitly walk through the full loop: Knowledge Base -> Retrieval (Search) -> Augmentation (Prompt) -> Generation (Answer).\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points.\n- TEACHES_BY_EXAMPLE: Use the 'Open-Book Exam vs Closed-Book Exam' or 'College Librarian' analogy right near the beginning to explain RAG.\n- NO_UNEXPLAINED_JARGON: Either remove or immediately define these terms using simple everyday analogies: hallucination (used without simple plain-language explanation), retrieval (used without simple plain-language explanation), token (used without simple plain-language explanation), autoregressive (dense academic jargon unsuitable for 12th-grade beginners), epistemological (dense academic jargon unsuitable for 12th-grade beginners).\n- KEY_POINTS_COVERAGE: Add clear, dedicated sections with headers covering: What is RAG (Core Definition), How it works (Step-by-step mechanism).\n- COHERENT_TEACHING_FLOW: Include Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Encouraging closing / Next steps for learner to complete the learning journey."
+      }
+    ]
+  },
+  {
+    "run_id": "run_8f38886e",
+    "timestamp": "2026-11-08T00:21:48.186027",
+    "topic": "Introduction to AI ML",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "ACCURACY_AND_GROUNDED",
+          "BEGINNER_FRIENDLY_LANGUAGE",
+          "TEACHES_BY_EXAMPLE",
+          "NO_UNEXPLAINED_JARGON",
+          "KEY_POINTS_COVERAGE",
+          "COHERENT_TEACHING_FLOW"
+        ],
+        "reasons": [
+          "[ACCURACY_AND_GROUNDED] Missing fundamental technical pillars: External knowledge base / documents.",
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 27.9 (exceeds maximum allowed 8.5); Reading ease is 0.0/100 (below minimum 60.0).",
+          "[TEACHES_BY_EXAMPLE] Fails: Lacks a concrete, relatable real-world analogy to anchor the concept for a complete beginner.",
+          "[NO_UNEXPLAINED_JARGON] Contains unexplained technical jargon: hallucination (used without simple plain-language explanation), retrieval (used without simple plain-language explanation), token (used without simple plain-language explanation), autoregressive (dense academic jargon unsuitable for 12th-grade beginners), epistemological (dense academic jargon unsuitable for 12th-grade beginners).",
+          "[KEY_POINTS_COVERAGE] Missing essential curriculum sections: What is RAG (Core Definition), How it works (Step-by-step mechanism).",
+          "[COHERENT_TEACHING_FLOW] Incomplete pedagogical flow: Missing Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Encouraging closing / Next steps for learner."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- ACCURACY_AND_GROUNDED: Explicitly walk through the full loop: Knowledge Base -> Retrieval (Search) -> Augmentation (Prompt) -> Generation (Answer).\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points.\n- TEACHES_BY_EXAMPLE: Use the 'Open-Book Exam vs Closed-Book Exam' or 'College Librarian' analogy right near the beginning to explain RAG.\n- NO_UNEXPLAINED_JARGON: Either remove or immediately define these terms using simple everyday analogies: hallucination (used without simple plain-language explanation), retrieval (used without simple plain-language explanation), token (used without simple plain-language explanation), autoregressive (dense academic jargon unsuitable for 12th-grade beginners), epistemological (dense academic jargon unsuitable for 12th-grade beginners).\n- KEY_POINTS_COVERAGE: Add clear, dedicated sections with headers covering: What is RAG (Core Definition), How it works (Step-by-step mechanism).\n- COHERENT_TEACHING_FLOW: Include Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Encouraging closing / Next steps for learner to complete the learning journey."
+      }
+    ]
+  },
+  {
+    "run_id": "run_ec151fb8",
+    "timestamp": "2026-11-08T00:25:26.432787",
+    "topic": "Introduction to AI ML",
+    "total_iterations": 3,
+    "final_status": "REJECTED_AFTER_RETRIES",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "ACCURACY_AND_GROUNDED",
+          "BEGINNER_FRIENDLY_LANGUAGE",
+          "TEACHES_BY_EXAMPLE",
+          "NO_UNEXPLAINED_JARGON",
+          "KEY_POINTS_COVERAGE",
+          "COHERENT_TEACHING_FLOW"
+        ],
+        "reasons": [
+          "[ACCURACY_AND_GROUNDED] Missing core Machine Learning pillars: Data / Examples, Learning / Pattern recognition, Prediction / Inference.",
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 30.0 (exceeds maximum allowed 8.5); Reading ease is 0.0/100 (below minimum 60.0).",
+          "[TEACHES_BY_EXAMPLE] Fails: Lacks a concrete, relatable real-world analogy to anchor the concept for a complete beginner.",
+          "[NO_UNEXPLAINED_JARGON] Contains unexplained technical jargon: latent (dense academic jargon unsuitable for 12th-grade beginners), epistemological (dense academic jargon unsuitable for 12th-grade beginners).",
+          "[KEY_POINTS_COVERAGE] Missing essential curriculum sections: What it is (Core Definition), Why it matters (Value & Problem Solved), How it works (Step-by-step mechanism).",
+          "[COHERENT_TEACHING_FLOW] Incomplete pedagogical flow: Missing Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Summary / Encouraging closing for learner."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- ACCURACY_AND_GROUNDED: Explain how ML gathers data, finds patterns during training, and makes predictions.\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points.\n- TEACHES_BY_EXAMPLE: Include a concrete real-life analogy (e.g. Open-Book Exam or Teaching a child) right near the beginning.\n- NO_UNEXPLAINED_JARGON: Either remove or immediately define these terms using simple everyday analogies: latent (dense academic jargon unsuitable for 12th-grade beginners), epistemological (dense academic jargon unsuitable for 12th-grade beginners).\n- KEY_POINTS_COVERAGE: Add clear, dedicated sections with headers covering: What it is (Core Definition), Why it matters (Value & Problem Solved), How it works (Step-by-step mechanism).\n- COHERENT_TEACHING_FLOW: Include Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Summary / Encouraging closing for learner to complete the learning journey."
+      },
+      {
+        "iteration": 2,
+        "failed_checkpoints": [
+          "BEGINNER_FRIENDLY_LANGUAGE"
+        ],
+        "reasons": [
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 10.0 (exceeds maximum allowed 8.5); Reading ease is 49.3/100 (below minimum 60.0)."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points."
+      }
+    ]
+  },
+  {
+    "run_id": "run_0ea81855",
+    "timestamp": "2026-11-08T00:26:16.623322",
+    "topic": "Introduction to AI ML",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "ACCURACY_AND_GROUNDED",
+          "BEGINNER_FRIENDLY_LANGUAGE",
+          "TEACHES_BY_EXAMPLE",
+          "NO_UNEXPLAINED_JARGON",
+          "KEY_POINTS_COVERAGE",
+          "COHERENT_TEACHING_FLOW"
+        ],
+        "reasons": [
+          "[ACCURACY_AND_GROUNDED] Missing core Machine Learning pillars: Data / Examples, Learning / Pattern recognition, Prediction / Inference.",
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 30.0 (exceeds maximum allowed 8.5); Reading ease is 0.0/100 (below minimum 55.0).",
+          "[TEACHES_BY_EXAMPLE] Fails: Lacks a concrete, relatable real-world analogy to anchor the concept for a complete beginner.",
+          "[NO_UNEXPLAINED_JARGON] Contains unexplained technical jargon: latent (dense academic jargon unsuitable for 12th-grade beginners), epistemological (dense academic jargon unsuitable for 12th-grade beginners).",
+          "[KEY_POINTS_COVERAGE] Missing essential curriculum sections: What it is (Core Definition), Why it matters (Value & Problem Solved), How it works (Step-by-step mechanism).",
+          "[COHERENT_TEACHING_FLOW] Incomplete pedagogical flow: Missing Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Summary / Encouraging closing for learner."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- ACCURACY_AND_GROUNDED: Explain how ML gathers data, finds patterns during training, and makes predictions.\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points.\n- TEACHES_BY_EXAMPLE: Include a concrete real-life analogy (e.g. Open-Book Exam or Teaching a child) right near the beginning.\n- NO_UNEXPLAINED_JARGON: Either remove or immediately define these terms using simple everyday analogies: latent (dense academic jargon unsuitable for 12th-grade beginners), epistemological (dense academic jargon unsuitable for 12th-grade beginners).\n- KEY_POINTS_COVERAGE: Add clear, dedicated sections with headers covering: What it is (Core Definition), Why it matters (Value & Problem Solved), How it works (Step-by-step mechanism).\n- COHERENT_TEACHING_FLOW: Include Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Summary / Encouraging closing for learner to complete the learning journey."
+      }
+    ]
+  },
+  {
+    "run_id": "run_5fa7714b",
+    "timestamp": "2026-11-08T00:26:26.714797",
+    "topic": "Introduction to RAG",
+    "total_iterations": 3,
+    "final_status": "REJECTED_AFTER_RETRIES",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "BEGINNER_FRIENDLY_LANGUAGE"
+        ],
+        "reasons": [
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 9.2 (exceeds maximum allowed 8.5); Reading ease is 51.0/100 (below minimum 55.0)."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points."
+      },
+      {
+        "iteration": 2,
+        "failed_checkpoints": [
+          "BEGINNER_FRIENDLY_LANGUAGE"
+        ],
+        "reasons": [
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 9.2 (exceeds maximum allowed 8.5); Reading ease is 51.0/100 (below minimum 55.0)."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points."
+      }
+    ]
+  },
+  {
+    "run_id": "run_8d4fabb5",
+    "timestamp": "2026-11-08T00:26:26.746500",
+    "topic": "Introduction to RAG",
+    "total_iterations": 3,
+    "final_status": "REJECTED_AFTER_RETRIES",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "ACCURACY_AND_GROUNDED",
+          "BEGINNER_FRIENDLY_LANGUAGE",
+          "TEACHES_BY_EXAMPLE",
+          "NO_UNEXPLAINED_JARGON",
+          "KEY_POINTS_COVERAGE",
+          "COHERENT_TEACHING_FLOW"
+        ],
+        "reasons": [
+          "[ACCURACY_AND_GROUNDED] Missing fundamental technical pillars: Augmentation / Context attachment step, External knowledge base / documents.",
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 21.1 (exceeds maximum allowed 8.5); Reading ease is 0.0/100 (below minimum 55.0).",
+          "[TEACHES_BY_EXAMPLE] Fails: Lacks a concrete, relatable real-world analogy to anchor the concept for a complete beginner.",
+          "[NO_UNEXPLAINED_JARGON] Contains unexplained technical jargon: vector (used without simple plain-language explanation), embedding (used without simple plain-language explanation), token (used without simple plain-language explanation), cosine similarity (used without simple plain-language explanation), latent (dense academic jargon unsuitable for 12th-grade beginners), hnsw (dense academic jargon unsuitable for 12th-grade beginners), mips (dense academic jargon unsuitable for 12th-grade beginners), perplexity (dense academic jargon unsuitable for 12th-grade beginners).",
+          "[KEY_POINTS_COVERAGE] Missing essential curriculum sections: What it is (Core Definition), Why it matters (Value & Problem Solved).",
+          "[COHERENT_TEACHING_FLOW] Incomplete pedagogical flow: Missing Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Summary / Encouraging closing for learner."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- ACCURACY_AND_GROUNDED: Explicitly walk through the full loop: Knowledge Base -> Retrieval (Search) -> Augmentation (Prompt) -> Generation (Answer).\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points.\n- TEACHES_BY_EXAMPLE: Include a concrete real-life analogy (e.g. Open-Book Exam or Teaching a child) right near the beginning.\n- NO_UNEXPLAINED_JARGON: Either remove or immediately define these terms using simple everyday analogies: vector (used without simple plain-language explanation), embedding (used without simple plain-language explanation), token (used without simple plain-language explanation), cosine similarity (used without simple plain-language explanation), latent (dense academic jargon unsuitable for 12th-grade beginners), hnsw (dense academic jargon unsuitable for 12th-grade beginners), mips (dense academic jargon unsuitable for 12th-grade beginners), perplexity (dense academic jargon unsuitable for 12th-grade beginners).\n- KEY_POINTS_COVERAGE: Add clear, dedicated sections with headers covering: What it is (Core Definition), Why it matters (Value & Problem Solved).\n- COHERENT_TEACHING_FLOW: Include Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Summary / Encouraging closing for learner to complete the learning journey."
+      },
+      {
+        "iteration": 2,
+        "failed_checkpoints": [
+          "BEGINNER_FRIENDLY_LANGUAGE"
+        ],
+        "reasons": [
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 9.2 (exceeds maximum allowed 8.5); Reading ease is 51.0/100 (below minimum 55.0)."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points."
+      }
+    ]
+  },
+  {
+    "run_id": "run_d5f99b3a",
+    "timestamp": "2026-11-08T00:26:26.772463",
+    "topic": "Introduction to RAG",
+    "total_iterations": 1,
+    "final_status": "REJECTED_AFTER_RETRIES",
+    "rejections": []
+  },
+  {
+    "run_id": "run_5dc3b50e",
+    "timestamp": "2026-11-08T00:27:13.108574",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "BEGINNER_FRIENDLY_LANGUAGE"
+        ],
+        "reasons": [
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 9.2 (exceeds maximum allowed 8.5); Reading ease is 51.0/100 (below minimum 55.0)."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points."
+      }
+    ]
+  },
+  {
+    "run_id": "run_79f2845a",
+    "timestamp": "2026-11-08T00:27:13.138733",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "ACCURACY_AND_GROUNDED",
+          "BEGINNER_FRIENDLY_LANGUAGE",
+          "TEACHES_BY_EXAMPLE",
+          "NO_UNEXPLAINED_JARGON",
+          "KEY_POINTS_COVERAGE",
+          "COHERENT_TEACHING_FLOW"
+        ],
+        "reasons": [
+          "[ACCURACY_AND_GROUNDED] Missing fundamental technical pillars: Augmentation / Context attachment step, External knowledge base / documents.",
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 21.1 (exceeds maximum allowed 8.5); Reading ease is 0.0/100 (below minimum 55.0).",
+          "[TEACHES_BY_EXAMPLE] Fails: Lacks a concrete, relatable real-world analogy to anchor the concept for a complete beginner.",
+          "[NO_UNEXPLAINED_JARGON] Contains unexplained technical jargon: vector (used without simple plain-language explanation), embedding (used without simple plain-language explanation), token (used without simple plain-language explanation), cosine similarity (used without simple plain-language explanation), latent (dense academic jargon unsuitable for 12th-grade beginners), hnsw (dense academic jargon unsuitable for 12th-grade beginners), mips (dense academic jargon unsuitable for 12th-grade beginners), perplexity (dense academic jargon unsuitable for 12th-grade beginners).",
+          "[KEY_POINTS_COVERAGE] Missing essential curriculum sections: What it is (Core Definition), Why it matters (Value & Problem Solved).",
+          "[COHERENT_TEACHING_FLOW] Incomplete pedagogical flow: Missing Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Summary / Encouraging closing for learner."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- ACCURACY_AND_GROUNDED: Explicitly walk through the full loop: Knowledge Base -> Retrieval (Search) -> Augmentation (Prompt) -> Generation (Answer).\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points.\n- TEACHES_BY_EXAMPLE: Include a concrete real-life analogy (e.g. Open-Book Exam or Teaching a child) right near the beginning.\n- NO_UNEXPLAINED_JARGON: Either remove or immediately define these terms using simple everyday analogies: vector (used without simple plain-language explanation), embedding (used without simple plain-language explanation), token (used without simple plain-language explanation), cosine similarity (used without simple plain-language explanation), latent (dense academic jargon unsuitable for 12th-grade beginners), hnsw (dense academic jargon unsuitable for 12th-grade beginners), mips (dense academic jargon unsuitable for 12th-grade beginners), perplexity (dense academic jargon unsuitable for 12th-grade beginners).\n- KEY_POINTS_COVERAGE: Add clear, dedicated sections with headers covering: What it is (Core Definition), Why it matters (Value & Problem Solved).\n- COHERENT_TEACHING_FLOW: Include Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Summary / Encouraging closing for learner to complete the learning journey."
+      }
+    ]
+  },
+  {
+    "run_id": "run_ee931fd4",
+    "timestamp": "2026-11-08T00:27:13.164222",
+    "topic": "Introduction to RAG",
+    "total_iterations": 1,
+    "final_status": "REJECTED_AFTER_RETRIES",
+    "rejections": []
+  },
+  {
+    "run_id": "run_63328889",
+    "timestamp": "2026-11-08T00:27:19.673761",
+    "topic": "Introduction to AI ML",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "BEGINNER_FRIENDLY_LANGUAGE"
+        ],
+        "reasons": [
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 10.0 (exceeds maximum allowed 8.5); Reading ease is 49.3/100 (below minimum 55.0)."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points."
+      }
+    ]
+  },
+  {
+    "run_id": "run_5b6a930d",
+    "timestamp": "2026-11-08T00:40:12.343175",
+    "topic": "Introduction to AI ML",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "ACCURACY_AND_GROUNDED",
+          "BEGINNER_FRIENDLY_LANGUAGE",
+          "TEACHES_BY_EXAMPLE",
+          "NO_UNEXPLAINED_JARGON",
+          "KEY_POINTS_COVERAGE",
+          "COHERENT_TEACHING_FLOW"
+        ],
+        "reasons": [
+          "[ACCURACY_AND_GROUNDED] Missing core Machine Learning pillars: Data / Examples, Learning / Pattern recognition, Prediction / Inference.",
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 30.0 (exceeds maximum allowed 8.5); Reading ease is 0.0/100 (below minimum 55.0).",
+          "[TEACHES_BY_EXAMPLE] Fails: Lacks a concrete, relatable real-world analogy to anchor the concept for a complete beginner.",
+          "[NO_UNEXPLAINED_JARGON] Contains unexplained technical jargon: latent (dense academic jargon unsuitable for 12th-grade beginners), epistemological (dense academic jargon unsuitable for 12th-grade beginners).",
+          "[KEY_POINTS_COVERAGE] Missing essential curriculum sections: What it is (Core Definition), Why it matters (Value & Problem Solved), How it works (Step-by-step mechanism).",
+          "[COHERENT_TEACHING_FLOW] Incomplete pedagogical flow: Missing Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Summary / Encouraging closing for learner."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- ACCURACY_AND_GROUNDED: Explain how ML gathers data, finds patterns during training, and makes predictions.\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points.\n- TEACHES_BY_EXAMPLE: Include a concrete real-life analogy (e.g. Open-Book Exam or Teaching a child) right near the beginning.\n- NO_UNEXPLAINED_JARGON: Either remove or immediately define these terms using simple everyday analogies: latent (dense academic jargon unsuitable for 12th-grade beginners), epistemological (dense academic jargon unsuitable for 12th-grade beginners).\n- KEY_POINTS_COVERAGE: Add clear, dedicated sections with headers covering: What it is (Core Definition), Why it matters (Value & Problem Solved), How it works (Step-by-step mechanism).\n- COHERENT_TEACHING_FLOW: Include Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Summary / Encouraging closing for learner to complete the learning journey."
+      }
+    ]
+  },
+  {
+    "run_id": "run_5c86b2a9",
+    "timestamp": "2026-11-08T13:58:05.799681",
+    "topic": "Introduction to AI ML",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "BEGINNER_FRIENDLY_LANGUAGE"
+        ],
+        "reasons": [
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 10.0 (exceeds maximum allowed 8.5); Reading ease is 49.3/100 (below minimum 55.0)."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points."
+      }
+    ]
+  },
+  {
+    "run_id": "run_99b00ad0",
+    "timestamp": "2026-11-08T13:59:21.641341",
+    "topic": "Introduction to AI ML",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "BEGINNER_FRIENDLY_LANGUAGE"
+        ],
+        "reasons": [
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 10.0 (exceeds maximum allowed 8.5); Reading ease is 49.3/100 (below minimum 55.0)."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points."
+      }
+    ]
+  },
+  {
+    "run_id": "run_71059056",
+    "timestamp": "2026-11-08T15:15:05.949178",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "ACCURACY_AND_GROUNDED",
+          "BEGINNER_FRIENDLY_LANGUAGE",
+          "TEACHES_BY_EXAMPLE",
+          "NO_UNEXPLAINED_JARGON",
+          "KEY_POINTS_COVERAGE",
+          "COHERENT_TEACHING_FLOW"
+        ],
+        "reasons": [
+          "[ACCURACY_AND_GROUNDED] Missing fundamental technical pillars: Augmentation / Context attachment step, External knowledge base / documents.",
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 21.1 (exceeds maximum allowed 8.5); Reading ease is 0.0/100 (below minimum 55.0).",
+          "[TEACHES_BY_EXAMPLE] Fails: Lacks a concrete, relatable real-world analogy to anchor the concept for a complete beginner.",
+          "[NO_UNEXPLAINED_JARGON] Contains unexplained technical jargon: vector (used without simple plain-language explanation), embedding (used without simple plain-language explanation), token (used without simple plain-language explanation), cosine similarity (used without simple plain-language explanation), latent (dense academic jargon unsuitable for 12th-grade beginners), hnsw (dense academic jargon unsuitable for 12th-grade beginners), mips (dense academic jargon unsuitable for 12th-grade beginners), perplexity (dense academic jargon unsuitable for 12th-grade beginners).",
+          "[KEY_POINTS_COVERAGE] Missing essential curriculum sections: What it is (Core Definition), Why it matters (Value & Problem Solved).",
+          "[COHERENT_TEACHING_FLOW] Incomplete pedagogical flow: Missing Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Summary / Encouraging closing for learner."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- ACCURACY_AND_GROUNDED: Explicitly walk through the full loop: Knowledge Base -> Retrieval (Search) -> Augmentation (Prompt) -> Generation (Answer).\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points.\n- TEACHES_BY_EXAMPLE: Include a concrete real-life analogy (e.g. Open-Book Exam or Teaching a child) right near the beginning.\n- NO_UNEXPLAINED_JARGON: Either remove or immediately define these terms using simple everyday analogies: vector (used without simple plain-language explanation), embedding (used without simple plain-language explanation), token (used without simple plain-language explanation), cosine similarity (used without simple plain-language explanation), latent (dense academic jargon unsuitable for 12th-grade beginners), hnsw (dense academic jargon unsuitable for 12th-grade beginners), mips (dense academic jargon unsuitable for 12th-grade beginners), perplexity (dense academic jargon unsuitable for 12th-grade beginners).\n- KEY_POINTS_COVERAGE: Add clear, dedicated sections with headers covering: What it is (Core Definition), Why it matters (Value & Problem Solved).\n- COHERENT_TEACHING_FLOW: Include Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Summary / Encouraging closing for learner to complete the learning journey."
+      }
+    ]
+  },
+  {
+    "run_id": "run_978441ab",
+    "timestamp": "2026-11-08T15:21:42.531419",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "BEGINNER_FRIENDLY_LANGUAGE"
+        ],
+        "reasons": [
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 9.2 (exceeds maximum allowed 8.5); Reading ease is 51.0/100 (below minimum 55.0)."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points."
+      }
+    ]
+  },
+  {
+    "run_id": "run_b73a0b54",
+    "timestamp": "2026-11-08T15:22:13.598564",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "BEGINNER_FRIENDLY_LANGUAGE"
+        ],
+        "reasons": [
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 9.2 (exceeds maximum allowed 8.5); Reading ease is 51.0/100 (below minimum 55.0)."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points."
+      }
+    ]
+  },
+  {
+    "run_id": "run_1f50cb8a",
+    "timestamp": "2026-11-08T15:22:13.610001",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "BEGINNER_FRIENDLY_LANGUAGE"
+        ],
+        "reasons": [
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 9.2 (exceeds maximum allowed 8.5); Reading ease is 51.0/100 (below minimum 55.0)."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points."
+      }
+    ]
+  },
+  {
+    "run_id": "run_dc6a9347",
+    "timestamp": "2026-11-08T15:28:44.813607",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "BEGINNER_FRIENDLY_LANGUAGE"
+        ],
+        "reasons": [
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 9.2 (exceeds maximum allowed 8.5); Reading ease is 51.0/100 (below minimum 55.0)."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points."
+      }
+    ]
+  },
+  {
+    "run_id": "run_f761d85f",
+    "timestamp": "2026-11-08T15:28:56.122555",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "BEGINNER_FRIENDLY_LANGUAGE"
+        ],
+        "reasons": [
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 9.2 (exceeds maximum allowed 8.5); Reading ease is 51.0/100 (below minimum 55.0)."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points."
+      }
+    ]
+  },
+  {
+    "run_id": "run_4dc5f8f5",
+    "timestamp": "2026-11-08T15:28:56.151868",
+    "topic": "Introduction to RAG",
+    "total_iterations": 2,
+    "final_status": "SHIPPED",
+    "rejections": [
+      {
+        "iteration": 1,
+        "failed_checkpoints": [
+          "ACCURACY_AND_GROUNDED",
+          "BEGINNER_FRIENDLY_LANGUAGE",
+          "TEACHES_BY_EXAMPLE",
+          "NO_UNEXPLAINED_JARGON",
+          "KEY_POINTS_COVERAGE",
+          "COHERENT_TEACHING_FLOW"
+        ],
+        "reasons": [
+          "[ACCURACY_AND_GROUNDED] Missing fundamental technical pillars: Augmentation / Context attachment step, External knowledge base / documents.",
+          "[BEGINNER_FRIENDLY_LANGUAGE] Language is too difficult for target learner: Grade level is 21.1 (exceeds maximum allowed 8.5); Reading ease is 0.0/100 (below minimum 55.0).",
+          "[TEACHES_BY_EXAMPLE] Fails: Lacks a concrete, relatable real-world analogy to anchor the concept for a complete beginner.",
+          "[NO_UNEXPLAINED_JARGON] Contains unexplained technical jargon: vector (used without simple plain-language explanation), embedding (used without simple plain-language explanation), token (used without simple plain-language explanation), cosine similarity (used without simple plain-language explanation), latent (dense academic jargon unsuitable for 12th-grade beginners), hnsw (dense academic jargon unsuitable for 12th-grade beginners), mips (dense academic jargon unsuitable for 12th-grade beginners), perplexity (dense academic jargon unsuitable for 12th-grade beginners).",
+          "[KEY_POINTS_COVERAGE] Missing essential curriculum sections: What it is (Core Definition), Why it matters (Value & Problem Solved).",
+          "[COHERENT_TEACHING_FLOW] Incomplete pedagogical flow: Missing Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Summary / Encouraging closing for learner."
+        ],
+        "remediation": "Remediation Requirements for Generator:\n- ACCURACY_AND_GROUNDED: Explicitly walk through the full loop: Knowledge Base -> Retrieval (Search) -> Augmentation (Prompt) -> Generation (Answer).\n- BEGINNER_FRIENDLY_LANGUAGE: Shorten complex sentences, replace academic words with daily conversational English, and use short bullet points.\n- TEACHES_BY_EXAMPLE: Include a concrete real-life analogy (e.g. Open-Book Exam or Teaching a child) right near the beginning.\n- NO_UNEXPLAINED_JARGON: Either remove or immediately define these terms using simple everyday analogies: vector (used without simple plain-language explanation), embedding (used without simple plain-language explanation), token (used without simple plain-language explanation), cosine similarity (used without simple plain-language explanation), latent (dense academic jargon unsuitable for 12th-grade beginners), hnsw (dense academic jargon unsuitable for 12th-grade beginners), mips (dense academic jargon unsuitable for 12th-grade beginners), perplexity (dense academic jargon unsuitable for 12th-grade beginners).\n- KEY_POINTS_COVERAGE: Add clear, dedicated sections with headers covering: What it is (Core Definition), Why it matters (Value & Problem Solved).\n- COHERENT_TEACHING_FLOW: Include Knowledge check / 2-3 question quiz, Step-by-step breakdown or flow diagram, Summary / Encouraging closing for learner to complete the learning journey."
+      }
+    ]
+  },
+  {
+    "run_id": "run_a584118d",
+    "timestamp": "2026-11-08T15:28:56.206776",
+    "topic": "Introduction to RAG",
+    "total_iterations": 1,
+    "final_status": "REJECTED_AFTER_RETRIES",
+    "rejections": []
+  }
+]

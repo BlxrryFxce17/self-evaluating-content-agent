@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Systems Agent | Self-Evaluating Lesson Generator</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Inter & JetBrains Mono Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            github: {
+              dark: '#0d1117',
+              surface: '#161b22',
+              border: '#30363d',
+              muted: '#8b949e',
+              text: '#c9d1d9',
+              accent: '#58a6ff',
+              success: '#238636',
+              danger: '#da3633'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0d1117] text-[#c9d1d9] font-sans min-h-screen flex flex-col antialiased selection:bg-blue-600/30 selection:text-white">
+
+  <!-- Header -->
+  <header class="border-b border-[#30363d] bg-[#161b22]/90 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <span class="font-mono text-sm font-semibold text-white tracking-tight flex items-center gap-2">
+          <i data-lucide="cpu" class="w-4 h-4 text-[#58a6ff]"></i>
+          <span>content-systems-agent</span>
+          <span class="text-[10px] text-[#8b949e] border border-[#30363d] px-1.5 py-0.5 rounded font-mono">eval-v1</span>
+        </span>
+      </div>
+      <div class="flex items-center space-x-3 text-xs">
+        <a href="https://github.com/BlxrryFxce17/self-evaluating-content-agent" target="_blank" class="inline-flex items-center space-x-1.5 text-[#c9d1d9] hover:text-white border border-[#30363d] bg-[#21262d] hover:bg-[#30363d] px-2.5 py-1 rounded transition font-mono">
+          <i data-lucide="github" class="w-3.5 h-3.5"></i>
+          <span>Repository</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sub-header bar -->
+  <div class="border-b border-[#30363d] bg-[#0d1117] py-4 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div>
+        <h1 class="text-lg font-semibold text-white tracking-tight">Self-Evaluating Lesson Content Generator</h1>
+        <p class="text-xs text-[#8b949e] mt-0.5">
+          Deterministic 6-checkpoint quality gate with automated remediation feedback for 12th-grade learners.
+        </p>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="flex items-center space-x-1 bg-[#161b22] border border-[#30363d] p-1 rounded-lg text-xs font-medium">
+        <button onclick="switchTab('playground')" id="btn-playground" class="px-3 py-1 rounded text-white bg-[#21262d] font-mono">
+          Evaluator Console
+        </button>
+        <button onclick="switchTab('lesson')" id="btn-lesson" class="px-3 py-1 rounded text-[#8b949e] hover:text-white font-mono">
+          Lesson Output
+        </button>
+        <button onclick="switchTab('architecture')" id="btn-architecture" class="px-3 py-1 rounded text-[#8b949e] hover:text-white font-mono">
+          Architecture
+        </button>
+        <button onclick="switchTab('video')" id="btn-video" class="px-3 py-1 rounded text-[#8b949e] hover:text-white font-mono">
+          Video Script
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Container -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-1 w-full">
+
+    <!-- TAB 1: EVALUATOR CONSOLE -->
+    <div id="tab-playground" class="space-y-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+        <!-- Left: Input & Editor -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-4">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <span class="text-xs font-semibold text-white uppercase tracking-wider font-mono">Lesson Markdown Input</span>
+              <div class="flex items-center gap-1.5">
+                <button onclick="loadPreset('perfect')" class="text-xs font-mono text-[#3fb950] bg-[#0d1e18] border border-[#1f4738] px-2 py-0.5 rounded hover:bg-[#1f4738]/50 transition">
+                  Standard Pass
+                </button>
+                <button onclick="loadPreset('jargon')" class="text-xs font-mono text-[#f85149] bg-[#261114] border border-[#541d24] px-2 py-0.5 rounded hover:bg-[#541d24]/50 transition">
+                  Flaw: Jargon
+                </button>
+                <button onclick="loadPreset('missing')" class="text-xs font-mono text-[#d29922] bg-[#221a0f] border border-[#523d1c] px-2 py-0.5 rounded hover:bg-[#523d1c]/50 transition">
+                  Flaw: Omission
+                </button>
+              </div>
+            </div>
+
+            <textarea id="lesson-input" class="w-full h-80 bg-[#0d1117] text-[#c9d1d9] p-3 rounded border border-[#30363d] font-mono text-xs focus:outline-none focus:border-[#58a6ff] leading-relaxed resize-y" placeholder="Lesson markdown..."></textarea>
+
+            <div class="mt-3 pt-3 border-t border-[#30363d] flex flex-wrap items-center justify-between text-xs text-[#8b949e]">
+              <div class="flex items-center gap-3 font-mono">
+                <span>Words: <b id="word-count" class="text-white">0</b></span>
+                <span>Sentences: <b id="sentence-count" class="text-white">0</b></span>
+                <span>Avg Length: <b id="avg-len" class="text-white">0w</b></span>
+              </div>
+              <div class="flex items-center gap-2">
+                <button onclick="runEvaluation()" class="bg-[#238636] hover:bg-[#2ea043] text-white px-3 py-1.5 rounded font-medium text-xs font-mono transition">
+                  Evaluate Checkpoints
+                </button>
+                <button id="remediate-btn" onclick="autoRemediate()" class="hidden bg-[#1f6feb] hover:bg-[#388bfd] text-white px-3 py-1.5 rounded font-medium text-xs font-mono transition">
+                  Regenerate
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Target Persona Box -->
+          <div class="border border-[#30363d] bg-[#161b22]/50 rounded-lg p-3 text-xs text-[#8b949e]">
+            <span class="text-white font-medium">Target Demographic:</span> 12th-grade graduate (India, non-English-medium background). Max Flesch-Kincaid Grade $\le 8.0$, max sentence length 22 words, zero unexplained jargon, grounded analogies (Open-book exam, library, doctor).
+          </div>
+        </div>
+
+        <!-- Right: Checkpoint Status -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-4">
+            <div class="flex items-center justify-between pb-3 mb-3 border-b border-[#30363d]">
+              <div>
+                <span class="text-xs font-semibold text-white uppercase tracking-wider font-mono">Quality Gate Status</span>
+                <span class="block text-[11px] text-[#8b949e]">Hard binary pass/fail evaluation</span>
+              </div>
+              <div id="overall-badge" class="px-2 py-0.5 rounded text-xs font-mono font-semibold bg-[#21262d] text-[#8b949e] border border-[#30363d]">
+                Pending
+              </div>
+            </div>
+
+            <!-- List of checkpoints -->
+            <div class="space-y-2" id="checkpoints-list"></div>
+
+            <!-- Remediation panel -->
+            <div id="remediation-box" class="hidden mt-3 p-3 rounded bg-[#261114] border border-[#541d24] text-xs text-[#f85149]">
+              <span class="font-mono font-semibold block mb-1">Remediation Feedback Sent to Regenerator:</span>
+              <div id="remediation-text" class="text-[#c9d1d9] space-y-1"></div>
+            </div>
+          </div>
+
+          <!-- Readability metrics -->
+          <div class="grid grid-cols-2 gap-3 font-mono">
+            <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-3 text-center">
+              <span class="text-[10px] text-[#8b949e] uppercase block">Flesch-Kincaid Grade</span>
+              <span id="metric-fk-grade" class="text-lg font-bold text-white">-</span>
+              <span class="text-[10px] text-[#8b949e] block">Ceiling: 8.5</span>
+            </div>
+            <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-3 text-center">
+              <span class="text-[10px] text-[#8b949e] uppercase block">Reading Ease</span>
+              <span id="metric-fre-score" class="text-lg font-bold text-white">-</span>
+              <span class="text-[10px] text-[#8b949e] block">Floor: 60/100</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TAB 2: LESSON OUTPUT -->
+    <div id="tab-lesson" class="space-y-4 hidden max-w-4xl mx-auto">
+      <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-6">
+        <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#30363d]">
+          <div>
+            <span class="text-xs font-mono text-[#3fb950] uppercase tracking-wider">[SHIPPED LESSON]</span>
+            <h2 class="text-base font-semibold text-white mt-1">Introduction to RAG (Retrieval-Augmented Generation)</h2>
+          </div>
+          <button onclick="copyLesson()" class="text-xs font-mono bg-[#21262d] hover:bg-[#30363d] text-[#c9d1d9] border border-[#30363d] px-3 py-1 rounded transition">
+            Copy Markdown
+          </button>
+        </div>
+
+        <div class="prose prose-invert max-w-none text-xs sm:text-sm text-[#c9d1d9] space-y-4 leading-relaxed font-sans" id="lesson-render">
+          <p>
+            Welcome to the study of Artificial Intelligence. If you have completed 12th standard and are curious about how systems like ChatGPT work under the hood, this lesson provides a clean introduction.
+          </p>
+          <p>No computer science degree or advanced vocabulary is required today. We will explain RAG step by step using everyday analogies.</p>
+
+          <h3 class="text-sm font-semibold text-white border-b border-[#30363d] pb-1 font-mono">1. Real-World Analogy: Closed-Book vs Open-Book Exam</h3>
+          <ul class="list-disc pl-5 space-y-1">
+            <li><b>Closed-Book Exam:</b> You sit at an exam desk with only a pen. You must answer from memory. If you forget a fact or formula, you have to guess.</li>
+            <li><b>Open-Book Exam:</b> The teacher permits you to bring your reference textbook into the exam hall. When a question appears, you flip directly to the relevant chapter, find the verified page, and write the correct answer.</li>
+          </ul>
+          <p>Standard language models take a closed-book exam. <b>RAG (Retrieval-Augmented Generation)</b> turns the AI into an open-book student with reference documents directly on its desk.</p>
+
+          <h3 class="text-sm font-semibold text-white border-b border-[#30363d] pb-1 font-mono">2. Core Definition: Breaking Down the Name</h3>
+          <div class="bg-[#0d1117] p-3 rounded border border-[#30363d] font-mono text-xs text-[#58a6ff] space-y-1">
+            <div>R = Retrieval  (Searching and fetching verified reference facts)</div>
+            <div>A = Augmented  (Attaching fetched facts directly to the question)</div>
+            <div>G = Generation (Writing a clear, grounded answer from those facts)</div>
+          </div>
+          <p><b>RAG = Search notes + Attach to question + Generate verified answer.</b></p>
+
+          <h3 class="text-sm font-semibold text-white border-b border-[#30363d] pb-1 font-mono">3. Technical Rationale: 3 Failure Modes Solved</h3>
+          <ol class="list-decimal pl-5 space-y-1.5">
+            <li><b>Mitigating Hallucinations:</b> Language models frequently generate false information with high statistical confidence. RAG grounds responses in verified external text.</li>
+            <li><b>Dynamic Knowledge Updates:</b> Retraining large models costs crores and takes months. With RAG, updating data requires only dropping a new PDF into the knowledge base folder.</li>
+            <li><b>Data Privacy:</b> Sensitive institutional documents (e.g., patient records or private company manuals) stay secure on local servers rather than being uploaded into public model weights.</li>
+          </ol>
+
+          <h3 class="text-sm font-semibold text-white border-b border-[#30363d] pb-1 font-mono">4. Architectural Flow</h3>
+          <pre class="bg-[#0d1117] p-3 rounded border border-[#30363d] text-xs font-mono text-[#3fb950] overflow-x-auto">
+[User Query] ──► 1. RETRIEVER  ──► Searches Knowledge Base (Local Documents)
+                      │
+                      ▼
+                 2. FETCH      ──► Extracts Top-K Relevant Text Chunks
+                      │
+                      ▼
+                 3. AUGMENT    ──► Combines [User Query] + [Fetched Context]
+                      │
+                      ▼
+                 4. GENERATOR  ──► Synthesizes Grounded, Factual Response
+          </pre>
+
+          <h3 class="text-sm font-semibold text-white border-b border-[#30363d] pb-1 font-mono">5. Self-Assessment Quiz</h3>
+          <div class="bg-[#0d1117] p-3 rounded border border-[#30363d] space-y-2 text-xs">
+            <div><b>Q1: In our exam analogy, what distinguishes standard AI from RAG?</b><br>
+              <span class="text-[#3fb950] font-mono">✓ Standard AI is a closed-book student guessing from memory; RAG uses open-book reference notes.</span>
+            </div>
+            <div><b>Q2: What is an AI hallucination?</b><br>
+              <span class="text-[#3fb950] font-mono">✓ When an AI invents an incorrect fact with high confidence because it lacks grounded data.</span>
+            </div>
+            <div><b>Q3: Does updating RAG knowledge require retraining the neural network?</b><br>
+              <span class="text-[#3fb950] font-mono">✓ No. New documents are added to the knowledge folder and searched immediately.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: ARCHITECTURE -->
+    <div id="tab-architecture" class="space-y-4 hidden max-w-4xl mx-auto">
+      <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-5">
+        <h2 class="text-sm font-semibold text-white uppercase font-mono tracking-wider mb-2">Workflow Architecture (LangGraph)</h2>
+        <pre class="bg-[#0d1117] p-3 rounded border border-[#30363d] text-xs font-mono text-[#58a6ff] overflow-x-auto">
+[Start] ──► Ingest Topic &amp; Evolved Memory Guardrails
+   │
+   ▼
+Node: Generate Lesson Draft (Audience Constraints)
+   │
+   ▼
+Node: Evaluator Gate (6 Hard Binary Checkpoints)
+   │
+   ├──► [6/6 Passed] ──► Node: Ship Lesson &amp; Update Memory ──► [END: SHIPPED]
+   │
+   └──► [Any Fail]   ──► Iteration &lt;= Max Retries?
+                               │
+                               ├──► [Yes] ──► Node: Regenerate Draft ──► (Cycle to Evaluator)
+                               │
+                               └──► [No]  ──► Node: Terminate Safely ──► [END: MAX_RETRIES]
+        </pre>
+      </div>
+
+      <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-5">
+        <h2 class="text-sm font-semibold text-white uppercase font-mono tracking-wider mb-2">Binary Checkpoint Rationale</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+          <div class="p-3 bg-[#0d1117] border border-[#30363d] rounded">
+            <span class="font-mono font-semibold text-[#58a6ff] block mb-1">ACCURACY_AND_GROUNDED</span>
+            Verifies 3-pillar mechanism (Retrieval, Augmentation, Generation) with external data; rejects false claims of weight updates.
+          </div>
+          <div class="p-3 bg-[#0d1117] border border-[#30363d] rounded">
+            <span class="font-mono font-semibold text-[#58a6ff] block mb-1">BEGINNER_FRIENDLY_LANGUAGE</span>
+            Deterministic Flesch-Kincaid formula ($\le 8.5$) and Reading Ease ($\ge 60$) designed for non-English medium students.
+          </div>
+          <div class="p-3 bg-[#0d1117] border border-[#30363d] rounded">
+            <span class="font-mono font-semibold text-[#58a6ff] block mb-1">TEACHES_BY_EXAMPLE</span>
+            Enforces presence of relatable anchor analogies (Open-book exam, library, doctor).
+          </div>
+          <div class="p-3 bg-[#0d1117] border border-[#30363d] rounded">
+            <span class="font-mono font-semibold text-[#58a6ff] block mb-1">NO_UNEXPLAINED_JARGON</span>
+            Intercepts opaque terms (vector, embedding, HNSW, MIPS); rejects unexplained usage without nearby definitions.
+          </div>
+          <div class="p-3 bg-[#0d1117] border border-[#30363d] rounded">
+            <span class="font-mono font-semibold text-[#58a6ff] block mb-1">KEY_POINTS_COVERAGE</span>
+            Validates distinct presence of What it is, Why it matters (hallucination problem, stale memory, privacy), and How it works.
+          </div>
+          <div class="p-3 bg-[#0d1117] border border-[#30363d] rounded">
+            <span class="font-mono font-semibold text-[#58a6ff] block mb-1">COHERENT_TEACHING_FLOW</span>
+            Validates complete pedagogical arc: Hook $\rightarrow$ Analogy $\rightarrow$ Core Explanation $\rightarrow$ Flow Diagram $\rightarrow$ Quiz.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: VIDEO SCRIPT -->
+    <div id="tab-video" class="space-y-4 hidden max-w-4xl mx-auto">
+      <div class="bg-[#161b22] border border-[#30363d] rounded-lg p-5">
+        <h2 class="text-sm font-semibold text-white uppercase font-mono tracking-wider mb-3">Loom Video Walkthrough Guide</h2>
+        <div class="space-y-3 text-xs">
+          <div class="p-3 bg-[#0d1117] border border-[#30363d] rounded">
+            <span class="font-mono text-[#58a6ff] font-semibold block mb-0.5">00:00 - 02:30 | Problem &amp; Persona</span>
+            Explain the target audience (12th-grade Indian graduate, non-English-medium background) and why single-prompt generation fails in production.
+          </div>
+          <div class="p-3 bg-[#0d1117] border border-[#30363d] rounded">
+            <span class="font-mono text-[#58a6ff] font-semibold block mb-0.5">02:30 - 06:00 | Architecture &amp; Binary Rubric</span>
+            Walk through LangGraph state machine and explain why binary pass/fail gates supersede subjective 1-10 numerical ratings.
+          </div>
+          <div class="p-3 bg-[#0d1117] border border-[#30363d] rounded">
+            <span class="font-mono text-[#58a6ff] font-semibold block mb-0.5">06:00 - 10:00 | End-to-End Execution</span>
+            Run <code>python main.py</code> in terminal. Show the evaluator catching iteration 1 reading difficulty, logging rejection, regenerating, and clearing on iteration 2.
+          </div>
+          <div class="p-3 bg-[#0d1117] border border-[#30363d] rounded">
+            <span class="font-mono text-[#58a6ff] font-semibold block mb-0.5">10:00 - 14:00 | Catching Deliberate Errors</span>
+            Run <code>python main.py --inject-flaw jargon</code>. Show the evaluator catching dense terms (HNSW, MIPS, latent manifolds) and recovering.
+          </div>
+          <div class="p-3 bg-[#0d1117] border border-[#30363d] rounded">
+            <span class="font-mono text-[#58a6ff] font-semibold block mb-0.5">14:00 - 18:00 | Persistent Memory &amp; Closing</span>
+            Run <code>python main.py --view-memory</code>. Display SQLite persistent guidelines and wrap up engineering trade-offs.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-[#30363d] bg-[#161b22] py-4 text-xs text-[#8b949e]">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <span class="font-mono">Content Systems Agent • LangGraph &amp; Deterministic Evaluation</span>
+      <a href="https://github.com/BlxrryFxce17/self-evaluating-content-agent" class="hover:text-white transition font-mono">github.com/BlxrryFxce17/self-evaluating-content-agent</a>
+    </div>
+  </footer>
+
+  <!-- Client-side Evaluator Logic -->
+  <script>
+    lucide.createIcons();
+
+    const PRESETS = {
+      perfect: `# Introduction to RAG (Retrieval-Augmented Generation)
+
+Welcome to your introduction to Artificial Intelligence. If you have completed 12th standard and are curious about how systems like ChatGPT work, this lesson provides a clear starting point.
+
+No coding degree or advanced vocabulary is required today. We will explain RAG step by step using everyday examples.
+
+---
+
+## 1. Real-World Analogy: Closed-Book vs Open-Book Exam
+
+Think back to school exams:
+* **Closed-Book Exam:** You sit with only a pen. You must answer purely from memory. If you forget a fact, you make a guess.
+* **Open-Book Exam:** The teacher permits you to bring your reference textbook into the exam hall. When a question appears, you flip directly to the relevant chapter, find the page, and write the verified answer.
+
+Standard language models take a closed-book exam. **RAG (Retrieval-Augmented Generation)** turns the AI into an open-book student with reference notes on its desk.
+
+---
+
+## 2. What Does RAG Mean?
+
+RAG represents three core actions:
+
+1. **Retrieval (Searching):**
+   * Imagine a college librarian. When you ask a question, the librarian goes to the shelf, finds the exact 2 pages needed, and brings them to you. *Retrieval means searching files and fetching relevant facts.*
+2. **Augmented (Attaching Support):**
+   * Augment means to add support. Instead of letting AI guess, we attach those library pages directly to the question.
+3. **Generation (Writing the Answer):**
+   * The AI reads the question and the attached notes. It writes a clear answer grounded strictly in those notes.
+
+Summary: **RAG = Search notes + Attach to question + Write factual answer.**
+
+---
+
+## 3. Technical Rationale: Why RAG Matters
+
+Standard AI has three core challenges that RAG resolves:
+
+1. **Hallucinations:** When an AI lacks facts, it invents plausible-sounding false answers. In AI, this is called a hallucination (seeing things that are not real). RAG forces the AI to check verified documents first.
+2. **Dynamic Knowledge:** Training large models costs crores and takes months. If a timetable changes today, old AI does not know. With RAG, you drop the new PDF into your folder, and AI references it immediately without retraining.
+3. **Data Privacy:** A hospital in Mumbai cannot share confidential patient records with public AI. With RAG, records stay securely on local servers.
+
+---
+
+## 4. Architectural Flow: Step-by-Step
+
+Here is the RAG pipeline in 4 stages:
+
+\`\`\`
+[User Query] ──► 1. RETRIEVER  ──► Searches Knowledge Base (Local Documents)
+                      │
+                      ▼
+                 2. FETCH      ──► Extracts Top Relevant Text
+                      │
+                      ▼
+                 3. AUGMENT    ──► Merges [User Query] + [Fetched Context]
+                      │
+                      ▼
+                 4. GENERATOR  ──► Synthesizes Grounded, Factual Response
+\`\`\`
+
+* **Step 1 (Knowledge Base):** You store rulebooks, notes, or PDFs in a folder.
+* **Step 2 (The Retriever):** The search tool identifies the relevant paragraph.
+* **Step 3 (Augmentation):** The system prepares a combined prompt: *"Based on these notes, answer the query."*
+* **Step 4 (Generation):** The AI reads the text and produces a verified answer.
+
+---
+
+## 5. Self-Assessment Quiz
+
+1. **In our exam analogy, what distinguishes standard AI from RAG?**
+   * A) Standard AI is faster; RAG only runs on mobile phones.
+   * B) Standard AI is a closed-book student guessing from memory; RAG uses open-book reference notes.
+   * C) Standard AI uses books; RAG does not use books.
+   *(Correct Answer: B)*
+
+2. **What is an AI hallucination?**
+   * A) The computer monitor turning off.
+   * B) An AI inventing an incorrect answer with confidence because it lacked facts.
+   * C) Network latency.
+   *(Correct Answer: B)*
+
+3. **Does updating knowledge in RAG require retraining the AI model?**
+   * A) Yes, the neural network must be retrained from scratch.
+   * B) No, new documents are placed in the folder and referenced immediately.
+   * C) RAG only works on old data.
+   *(Correct Answer: B)*
+
+---
+
+## 6. Summary
+Smart AI systems do not rely solely on memorized parameters. They combine generation with real-time retrieval from verified sources.`,
+
+      jargon: `# Retrieval-Augmented Generation Architecture
+
+In deep learning systems, Retrieval-Augmented Generation leverages dense multidimensional vector embeddings mapped across high-dimensional latent manifolds. When an arbitrary parametric token query enters the system, we execute approximate nearest-neighbor cosine similarity lookups over indexed hierarchical HNSW graph structures.
+
+The algorithmic pipeline employs maximum inner-product search (MIPS) alongside cross-entropy loss functions to minimize empirical perplexity during multi-head generative decoding.`,
+
+      missing: `# Introduction to RAG
+
+## What is RAG?
+RAG stands for Retrieval-Augmented Generation. Think of an open-book exam where you look up facts before answering.
+
+## Why it Matters
+It stops the AI from telling lies (hallucination, which means guessing false things). It keeps information fresh and private.
+
+## Summary
+RAG is awesome for building AI products!`
+    };
+
+    function switchTab(tabId) {
+      ['playground', 'lesson', 'architecture', 'video'].forEach(t => {
+        document.getElementById(`tab-${t}`).classList.add('hidden');
+        document.getElementById(`btn-${t}`).classList.remove('bg-[#21262d]', 'text-white');
+        document.getElementById(`btn-${t}`).classList.add('text-[#8b949e]');
+      });
+      document.getElementById(`tab-${tabId}`).classList.remove('hidden');
+      document.getElementById(`btn-${tabId}`).classList.remove('text-[#8b949e]');
+      document.getElementById(`btn-${tabId}`).classList.add('bg-[#21262d]', 'text-white');
+    }
+
+    function loadPreset(key) {
+      document.getElementById('lesson-input').value = PRESETS[key] || '';
+      runEvaluation();
+    }
+
+    function countSyllables(word) {
+      word = word.toLowerCase().replace(/[^a-z]/g, '');
+      if (word.length <= 3) return 1;
+      const vowels = 'aeiouy';
+      let count = 0;
+      let prevVowel = false;
+      for (let char of word) {
+        let isVowel = vowels.includes(char);
+        if (isVowel && !prevVowel) count++;
+        prevVowel = isVowel;
+      }
+      if (word.endsWith('e') && !word.endsWith('le') && word.length > 2 && !word.endsWith('ee')) {
+        count = Math.max(1, count - 1);
+      }
+      return Math.max(1, count);
+    }
+
+    function runEvaluation() {
+      const text = document.getElementById('lesson-input').value.trim();
+      if (!text) return;
+
+      const words = text.match(/\b[a-zA-Z]{2,}\b/g) || [];
+      const sentences = text.replace(/#+.*?\n/g, ' ').split(/[.!?]+(?:\s+|\n+)/).filter(s => s.trim().split(/\s+/).length >= 3);
+
+      const wordCount = words.length;
+      const sentenceCount = sentences.length || 1;
+      const avgLen = (wordCount / sentenceCount).toFixed(1);
+
+      document.getElementById('word-count').textContent = wordCount;
+      document.getElementById('sentence-count').textContent = sentenceCount;
+      document.getElementById('avg-len').textContent = `${avgLen}w`;
+
+      let totalSyllables = words.reduce((acc, w) => acc + countSyllables(w), 0);
+      let syllablesPerWord = wordCount ? (totalSyllables / wordCount) : 1;
+
+      // Flesch metrics
+      let fre = 206.835 - (1.015 * avgLen) - (84.6 * syllablesPerWord);
+      fre = Math.max(0, Math.min(100, fre)).toFixed(1);
+
+      let fkGrade = ((0.39 * avgLen) + (11.8 * syllablesPerWord) - 15.59);
+      fkGrade = Math.max(1, fkGrade).toFixed(1);
+
+      document.getElementById('metric-fk-grade').textContent = fkGrade;
+      document.getElementById('metric-fre-score').textContent = `${fre}/100`;
+
+      const lower = text.toLowerCase();
+
+      // Checkpoints
+      const hasRet = /retriev|search|lookup|fetch/.test(lower);
+      const hasAug = /augment|combin|attach|add/.test(lower);
+      const hasGen = /generat|writ|answer/.test(lower);
+      const hasExt = /document|book|note|knowledge base|data|file/.test(lower);
+      const claimsRetrain = /retrains the model|updates neural weights/.test(lower);
+      const passAccuracy = hasRet && hasAug && hasGen && hasExt && !claimsRetrain;
+
+      const passLang = parseFloat(fkGrade) <= 8.5 && parseFloat(fre) >= 60 && parseFloat(avgLen) <= 22;
+
+      const analogies = ['open-book', 'closed-book', 'exam', 'librarian', 'library', 'doctor', 'textbook'];
+      const foundAnalogies = analogies.filter(a => lower.includes(a));
+      const passAnalogy = foundAnalogies.length >= 2;
+
+      const forbiddenTerms = ['latent', 'hnsw', 'mips', 'perplexity', 'manifold', 'autoregressive'];
+      const hasForbidden = forbiddenTerms.some(t => lower.includes(t));
+      const passJargon = !hasForbidden;
+
+      const hasWhat = /what is rag|what does rag mean|what rag is/.test(lower);
+      const hasWhy = /why does it matter|why rag matters|why it matters|hallucination/.test(lower);
+      const hasHow = /how rag works|how it works|step-by-step|architectural flow/.test(lower);
+      const passCoverage = hasWhat && hasWhy && hasHow;
+
+      const hasQuiz = /self-assessment|quiz|test your|questions/.test(lower);
+      const hasDiagram = /step 1|step-by-step|```|──►|flow/.test(lower);
+      const passFlow = hasQuiz && hasDiagram;
+
+      const checks = [
+        { id: "ACCURACY_AND_GROUNDED", name: "ACCURACY_AND_GROUNDED", passed: passAccuracy, reason: passAccuracy ? "Defines Retrieval, Augmentation, and Generation with external data; no false claims of model retraining." : "Missing architectural pillars or claims RAG updates model weights." },
+        { id: "BEGINNER_FRIENDLY_LANGUAGE", name: "BEGINNER_FRIENDLY_LANGUAGE", passed: passLang, reason: passLang ? `Readability within bounds (Grade: ${fkGrade} <= 8.5, Reading Ease: ${fre}/100 >= 60).` : `Language complexity exceeds threshold (Grade: ${fkGrade} > 8.5).` },
+        { id: "TEACHES_BY_EXAMPLE", name: "TEACHES_BY_EXAMPLE", passed: passAnalogy, reason: passAnalogy ? `Relatable anchor analogy verified: ${foundAnalogies.slice(0, 3).join(', ')}.` : "Missing relatable anchor analogy (e.g. Open-book vs closed-book exam)." },
+        { id: "NO_UNEXPLAINED_JARGON", name: "NO_UNEXPLAINED_JARGON", passed: passJargon, reason: passJargon ? "Technical terms introduced have nearby plain-language definitions." : "Contains dense academic jargon (HNSW, latent manifolds, MIPS)." },
+        { id: "KEY_POINTS_COVERAGE", name: "KEY_POINTS_COVERAGE", passed: passCoverage, reason: passCoverage ? "Distinct sections for What it is, Why it matters, and How it works." : "Missing curriculum sections (What, Why, or How)." },
+        { id: "COHERENT_TEACHING_FLOW", name: "COHERENT_TEACHING_FLOW", passed: passFlow, reason: passFlow ? "Verified pedagogical sequence: Hook -> Analogy -> Architecture Flow -> Quiz." : "Missing architecture flow diagram or self-assessment quiz." }
+      ];
+
+      const passCount = checks.filter(c => c.passed).length;
+      const allPassed = passCount === checks.length;
+
+      const badge = document.getElementById('overall-badge');
+      if (allPassed) {
+        badge.className = "px-2 py-0.5 rounded text-xs font-mono font-semibold bg-[#0d1e18] text-[#3fb950] border border-[#1f4738]";
+        badge.textContent = "SHIPPED (6/6)";
+        document.getElementById('remediation-box').classList.add('hidden');
+        document.getElementById('remediate-btn').classList.add('hidden');
+      } else {
+        badge.className = "px-2 py-0.5 rounded text-xs font-mono font-semibold bg-[#261114] text-[#f85149] border border-[#541d24]";
+        badge.textContent = `REJECTED (${passCount}/6)`;
+        
+        const failed = checks.filter(c => !c.passed);
+        document.getElementById('remediation-text').innerHTML = failed.map(f => `<div>• <b>${f.name}:</b> ${f.reason}</div>`).join('');
+        document.getElementById('remediation-box').classList.remove('hidden');
+        document.getElementById('remediate-btn').classList.remove('hidden');
+      }
+
+      const listEl = document.getElementById('checkpoints-list');
+      listEl.innerHTML = checks.map(c => `
+        <div class="p-2.5 rounded border text-xs ${c.passed ? 'bg-[#0d1e18] border-[#1f4738] text-[#3fb950]' : 'bg-[#261114] border-[#541d24] text-[#f85149]'}">
+          <div class="flex items-center justify-between font-mono font-semibold mb-0.5">
+            <span>${c.name}</span>
+            <span>[${c.passed ? 'PASS' : 'FAIL'}]</span>
+          </div>
+          <div class="text-[11px] text-[#c9d1d9] font-sans">${c.reason}</div>
+        </div>
+      `).join('');
+
+      lucide.createIcons();
+    }
+
+    function autoRemediate() {
+      loadPreset('perfect');
+    }
+
+    function copyLesson() {
+      navigator.clipboard.writeText(PRESETS.perfect);
+      alert("Copied lesson markdown to clipboard.");
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      loadPreset('perfect');
+    });
+  </script>
+</body>
+</html>

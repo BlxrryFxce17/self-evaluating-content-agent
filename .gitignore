@@ -1,0 +1,22 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Environment files
+.env
+.venv/
+env/
+venv/
+ENV/
+
+# System and IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Persistent local runs (keep directory structure)
+memory_store/*.db-journal
+
